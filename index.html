@@ -13,25 +13,21 @@
     >
 
       <a-assets>
-        <!-- GATO (modelo real que sí carga) -->
+        <!-- NUEVO MODELO (NO PATO) -->
         <a-asset-item 
-          id="catModel" 
-          src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Cat/glTF-Binary/Cat.glb">
+          id="nuevoModelo" 
+          src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/DamagedHelmet/glTF-Binary/DamagedHelmet.glb">
         </a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0"></a-camera>
 
-      <!-- LUZ OSCURA -->
-      <a-light type="ambient" intensity="0.4"></a-light>
-      <a-light type="spot" position="0 1 1" intensity="1.5"></a-light>
-
       <a-entity mindar-image-target="targetIndex: 0">
 
         <a-gltf-model 
-          src="#catModel"
+          src="#nuevoModelo"
           position="0 -0.2 0.15"
-          scale="0.2 0.2 0.2"
+          scale="0.5 0.5 0.5"
           rotation="0 0 0">
         </a-gltf-model>
 
