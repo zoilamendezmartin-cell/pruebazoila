@@ -13,10 +13,9 @@
     >
 
       <a-assets>
-        <!-- NUEVO MODELO (NO PATO) -->
         <a-asset-item 
-          id="nuevoModelo" 
-          src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/DamagedHelmet/glTF-Binary/DamagedHelmet.glb">
+          id="duck" 
+          src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Duck/glTF-Binary/Duck.glb">
         </a-asset-item>
       </a-assets>
 
@@ -24,11 +23,20 @@
 
       <a-entity mindar-image-target="targetIndex: 0">
 
+        <!-- CUBO (si esto aparece, todo funciona) -->
+        <a-box 
+          position="0 0 0.1" 
+          color="red" 
+          depth="0.1" 
+          height="0.1" 
+          width="0.1">
+        </a-box>
+
+        <!-- PATO -->
         <a-gltf-model 
-          src="#nuevoModelo"
+          src="#duck"
           position="0 -0.2 0.15"
-          scale="0.5 0.5 0.5"
-          rotation="0 0 0">
+          scale="0.005 0.005 0.005">
         </a-gltf-model>
 
       </a-entity>
