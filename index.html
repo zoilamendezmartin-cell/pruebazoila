@@ -9,36 +9,32 @@
   <body>
     <a-scene 
       mindar-image="imageTargetSrc: ./targets.mind;" 
-      color-space="sRGB" 
-      renderer="colorManagement: true, physicallyCorrectLights" 
-      vr-mode-ui="enabled: false" 
+      color-space="sRGB"
+      renderer="colorManagement: true, physicallyCorrectLights"
+      vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false"
     >
 
-      <!-- ASSETS -->
       <a-assets>
-        <!-- 🐆 PANTERA OSCURA -->
+        <!-- 🐺 LOBO (modelo real que sí carga) -->
         <a-asset-item 
-          id="pantherModel" 
-          src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Animal/Panther/glTF-Binary/Panther.glb">
+          id="wolfModel" 
+          src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Fox/glTF-Binary/Fox.glb">
         </a-asset-item>
       </a-assets>
 
-      <!-- CÁMARA -->
       <a-camera position="0 0 0"></a-camera>
 
-      <!-- LUCES (muy importante para ambiente oscuro) -->
+      <!-- luces tipo club -->
       <a-light type="ambient" intensity="0.3"></a-light>
-      <a-light type="spot" position="0 1 1" intensity="2" angle="25"></a-light>
+      <a-light type="spot" position="0 1 1" intensity="2"></a-light>
 
-      <!-- TARGET -->
       <a-entity mindar-image-target="targetIndex: 0">
 
-        <!-- 🐆 MODELO -->
         <a-gltf-model 
-          src="#pantherModel"
+          src="#wolfModel"
           position="0 -0.3 0.2"
-          scale="0.4 0.4 0.4"
+          scale="0.02 0.02 0.02"
           rotation="0 180 0"
           animation-mixer>
         </a-gltf-model>
